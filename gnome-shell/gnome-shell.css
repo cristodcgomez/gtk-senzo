@@ -1,0 +1,458 @@
+@import url("/usr/share/gnome-shell/theme/gnome-shell.css");
+stage {
+  font-family: Ubuntu, Cantarell, Sans-Serif;
+  color: #ffffff;
+}
+
+/* TOP BAR */
+#panel {
+  background-color: rgba(232, 230, 228, 0.75);
+  /* transition from solid to transparent */
+  transition-duration: 250ms;
+  font-weight: bold;
+  height: 1.86em;
+}
+#panel.lock-screen, #panel.login-screen, #panel.unlock-screen {
+  background-color: transparent;
+}
+#panel #panelCenter,
+#panel #panelLeft {
+  spacing: 10px;
+}
+#panel .panel-corner {
+  -panel-corner-radius: 3px;
+  -panel-corner-background-color: rgba(255, 255, 255, 0.35);
+  -panel-corner-border-width: 3px;
+  -panel-corner-border-color: transparent;
+}
+#panel .panel-corner:active, #panel .panel-corner:focus, #panel .panel-corner:overview {
+  -panel-corner-border-color: #515151;
+}
+#panel .panel-button {
+  -natural-hpadding: 12px;
+  -minimum-hpadding: 6px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  transition-duration: 100ms;
+}
+#panel .panel-button .app-menu-icon {
+  -st-icon-style: symbolic;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#panel .panel-button .app-menu-icon > StIcon,
+#panel .panel-button .popup-menu-arrow,
+#panel .panel-button .system-status-icon {
+  icon-shadow: 0 1px 2px rgba(51, 51, 51, 0.75);
+}
+#panel .panel-button:hover {
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(51, 51, 51, 0.8);
+}
+#panel .panel-button:hover .app-menu-icon > StIcon,
+#panel .panel-button:hover .popup-menu-arrow,
+#panel .panel-button:hover .system-status-icon {
+  icon-shadow: 0 1px 6px black;
+}
+#panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus, #panel .panel-button:overview {
+  background-color: rgba(0, 0, 0, 0.01);
+  box-shadow: inset 0 -2px 0 #515151;
+  color: #2b2b2b;
+}
+#panel .panel-button:active > .system-status-icon, #panel .panel-button:checked > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:overview > .system-status-icon {
+  icon-shadow: black 0 2px 2px;
+}
+#panel .panel-button .system-status-icon {
+  icon-size: 1.09em;
+  padding: 0 5px;
+}
+.lock-screen #panel .panel-button, .login-screen #panel .panel-button, .unlock-screen #panel .panel-button {
+  color: #2b2b2b;
+}
+.lock-screen #panel .panel-button:active, .lock-screen #panel .panel-button:focus, .lock-screen #panel .panel-button:hover, .login-screen #panel .panel-button:active, .login-screen #panel .panel-button:focus, .login-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active, .unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover {
+  color: #2b2b2b;
+}
+#panel .panel-status-indicators-box,
+#panel .panel-status-menu-box {
+  spacing: 2px;
+}
+#panel .power-status.panel-status-indicators-box {
+  spacing: 0;
+}
+#panel .screencast-indicator {
+  color: orange;
+}
+#panel.solid {
+  background-color: black;
+  /* transition from transparent to solid */
+  transition-duration: 300ms;
+}
+#panel.solid .panel-corner {
+  -panel-corner-background-color: black;
+}
+#panel.solid .panel-button {
+  color: #ccc;
+  text-shadow: none;
+}
+#panel.solid .panel-button:hover {
+  color: #2b2b2b;
+}
+#panel.solid .app-menu-icon > StIcon,
+#panel.solid .popup-menu-arrow,
+#panel.solid .system-status-icon {
+  icon-shadow: none;
+}
+
+#calendarArea {
+  padding: 0.75em 1.0em;
+}
+
+.calendar {
+  margin-bottom: 1em;
+}
+
+.calendar,
+.datemenu-displays-box,
+.datemenu-today-button,
+.message-list-sections {
+  margin: 0 1.5em;
+}
+
+.datemenu-calendar-column {
+  spacing: 0.5em;
+}
+
+.datemenu-displays-section {
+  padding-bottom: 3em;
+}
+
+.datemenu-displays-box {
+  spacing: 1em;
+}
+
+.datemenu-calendar-column {
+  border: 0 solid #2f2f2f;
+}
+.datemenu-calendar-column:ltr {
+  border-left-width: 1px;
+}
+.datemenu-calendar-column:rtl {
+  border-right-width: 1px;
+}
+
+.datemenu-today-button,
+.events-section-title,
+.weather-button,
+.world-clocks-button {
+  border-radius: 4px;
+  padding: 0.4em;
+}
+
+.message-list-section-list:ltr {
+  padding-left: 0.4em;
+}
+
+.message-list-section-list:rtl {
+  padding-right: 0.4em;
+}
+
+.datemenu-today-button:focus, .datemenu-today-button:hover,
+.events-section-title:focus,
+.events-section-title:hover,
+.weather-button:focus,
+.weather-button:hover,
+.world-clocks-button:focus,
+.world-clocks-button:hover {
+  background-color: #2f2f2f;
+}
+.datemenu-today-button:active,
+.events-section-title:active,
+.weather-button:active,
+.world-clocks-button:active {
+  color: #404040;
+  background-color: #444;
+}
+
+.datemenu-today-button .date-label {
+  font-size: 1.5em;
+}
+
+.events-section-title,
+.weather-header,
+.world-clocks-header {
+  color: black;
+  font-weight: bold;
+}
+
+.world-clocks-grid {
+  spacing-rows: 0.4em;
+}
+
+.weather-box {
+  spacing: 0.4em;
+}
+
+.calendar-month-label {
+  color: #040404;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.pager-button {
+  color: white;
+  background-color: transparent;
+  width: 32px;
+  border-radius: 4px;
+}
+.pager-button:focus, .pager-button:hover {
+  background-color: rgba(17, 17, 17, 0.05);
+}
+.pager-button:active {
+  background-color: rgba(34, 34, 34, 0.05);
+}
+
+.calendar-change-month-back {
+  background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-left.svg");
+}
+.calendar-change-month-back:rtl {
+  background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-right.svg");
+}
+
+.calendar-change-month-forward {
+  background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-right.svg");
+}
+.calendar-change-month-forward:rtl {
+  background-image: url("resource:///org/gnome/shell/theme/calendar-arrow-left.svg");
+}
+
+.calendar-day-base {
+  font-size: 80%;
+  text-align: center;
+  width: 2.4em;
+  height: 2.4em;
+  padding: 0.1em;
+  margin: 2px;
+  border-radius: 1.4em;
+}
+.calendar-day-base:focus, .calendar-day-base:hover {
+  background-color: #2f2f2f;
+}
+.calendar-day-base:active, .calendar-day-base:selected {
+  color: #404040;
+  background-color: #444;
+  border-color: transparent;
+}
+.calendar-day-base.calendar-day-heading {
+  color: black;
+  margin-top: 1em;
+  font-size: 70%;
+}
+
+.calendar-day {
+  border-width: 0;
+}
+
+.calendar-day-top {
+  border-top-width: 1px;
+}
+
+.calendar-day-left {
+  border-left-width: 1px;
+}
+
+.calendar-nonwork-day {
+  color: #555;
+}
+
+.calendar-today {
+  font-weight: bold;
+  border: 1px solid rgba(119, 119, 119, 0.5);
+}
+
+.calendar-day-with-events {
+  color: #2b2b2b;
+  font-weight: bold;
+  background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
+}
+
+.calendar-other-month-day {
+  color: rgba(17, 17, 17, 0.15);
+  opacity: 0.5;
+}
+
+.calendar-week-number {
+  font-size: 70%;
+  font-weight: bold;
+  width: 2.3em;
+  height: 1.8em;
+  border-radius: 2px;
+  padding: 0.5em 0 0;
+  margin: 6px;
+  background-color: rgba(17, 17, 17, 0.3);
+  color: #222;
+}
+
+/* Message list */
+.message-list {
+  width: 31.5em;
+}
+
+.message-list-clear-button.button {
+  background-color: transparent;
+  margin: 1.5em 1.5em 0;
+}
+.message-list-clear-button.button:focus, .message-list-clear-button.button:hover {
+  background-color: #2f2f2f;
+}
+
+.message-list-sections {
+  spacing: 1em;
+}
+
+.message-list-section,
+.message-list-section-list {
+  spacing: 0.4em;
+}
+
+.message {
+  border-radius: 3px;
+}
+.message:focus, .message:hover {
+  background-color: #2f2f2f;
+}
+
+.message-icon-bin {
+  padding: 0.68em 0.2em 0.68em 0.68em;
+}
+.message-icon-bin:rtl {
+  padding: 0.68em 0.68em 0.68em 0.2em;
+}
+
+.message-icon-bin > StIcon {
+  color: black;
+  icon-size: 1.09em;
+  -st-icon-style: symbolic;
+}
+
+.message-secondary-bin {
+  padding: 0 0.82em;
+}
+
+.message-secondary-bin > .event-time {
+  color: black;
+  font-size: 0.7em;
+  /* HACK: the label should be baseline-aligned with a 1em label,
+                     fake this with some bottom padding */
+  padding-bottom: 0.13em;
+}
+
+.message-secondary-bin > StIcon {
+  icon-size: 1.09em;
+}
+
+.message-title {
+  color: #040404;
+}
+
+.message-content {
+  color: black;
+  padding: 10px;
+}
+
+.message-media-control {
+  padding: 12px;
+  color: black;
+}
+.message-media-control:last-child:ltr {
+  padding-right: 18px;
+}
+.message-media-control:last-child:rtl {
+  padding-left: 18px;
+}
+.message-media-control:hover {
+  color: #111;
+}
+.message-media-control:insensitive {
+  color: black;
+}
+
+.media-message-cover-icon {
+  icon-size: 48px !important;
+}
+.media-message-cover-icon.fallback {
+  color: #3c3c3c;
+  background-color: #222;
+  border: 2px solid #222;
+  border-radius: 2px;
+  icon-size: 16px;
+  padding: 8px;
+}
+
+.system-switch-user-submenu-icon.user-icon {
+  icon-size: 20px;
+  padding: 0 2px;
+}
+
+.system-switch-user-submenu-icon.default-icon {
+  icon-size: 16px;
+  padding: 0 4px;
+}
+
+#appMenu {
+  spinner-image: url("resource:///org/gnome/shell/theme/process-working.svg");
+  spacing: 4px;
+}
+#appMenu .label-shadow {
+  color: transparent;
+}
+
+.aggregate-menu {
+  min-width: 21em;
+}
+.aggregate-menu .popup-menu-icon {
+  padding: 0 4px;
+}
+
+.system-menu-action {
+  color: #111;
+  border-radius: 32px;
+  /* wish we could do 50% */
+  padding: 13px;
+  border: 1px solid #848484;
+}
+.system-menu-action:focus, .system-menu-action:hover {
+  background-color: rgba(17, 17, 17, 0.1);
+  color: #111;
+  border: none;
+  padding: 14px;
+}
+.system-menu-action:active {
+  background-color: #444;
+  color: #333;
+}
+.system-menu-action > StIcon {
+  icon-size: 16px;
+}
+
+.ripple-box {
+  width: 52px;
+  height: 52px;
+  background-image: url("resource:///org/gnome/shell/theme/corner-ripple-ltr.png");
+  background-size: contain;
+}
+
+.ripple-box:rtl {
+  background-image: url("resource:///org/gnome/shell/theme/corner-ripple-rtl.png");
+}
+
+.popup-menu-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.popup-menu-icon {
+  icon-size: 1.09em;
+}
+
+/*# sourceMappingURL=gnome-shell.css.map */

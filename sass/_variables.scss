@@ -1,0 +1,51 @@
+
+// Colors
+
+$white: #ffffff !default;
+$black: #000000 !default;
+
+$ubuntu:     #e95420 !default;
+$ubuntu-90:  lighten($ubuntu, 5%) !default;
+$ubuntu-80:  lighten($ubuntu, 10%) !default;
+$ubuntu-70:  lighten($ubuntu, 15%) !default;
+$ubuntu-60:  lighten($ubuntu, 20%) !default;
+$ubuntu-50:  lighten($ubuntu, 25%) !default;
+$ubuntu-40:  lighten($ubuntu, 27.5%) !default;
+$ubuntu-30:  lighten($ubuntu, 30%) !default;
+$ubuntu-20:  lighten($ubuntu, 32.5%) !default;
+$ubuntu-10:  lighten($ubuntu, 35%) !default;
+
+$violet:     #772953 !default;
+$violet-90:  lighten($violet, 5%) !default;
+$violet-80:  lighten($violet, 10%) !default;
+$violet-70:  lighten($violet, 15%) !default;
+$violet-60:  lighten($violet, 20%) !default;
+$violet-50:  lighten($violet, 25%) !default;
+
+$text-grey:     #111111 !default;
+$cool-grey:     #333333 !default;
+$warm-grey:     #aea79f !default;
+$warm-grey-90:  lighten(#aea79f,5%) !default;
+$warm-grey-80:  lighten(#aea79f,10%) !default;
+$warm-grey-70:  lighten(#aea79f,15%) !default;
+$warm-grey-60:  lighten(#aea79f,20%) !default;
+$warm-grey-50:  lighten(#aea79f,25%) !default;
+
+
+
+$panel-corner-radius: 3px;
+
+$font-size: 12;
+$font-family: Ubuntu, Cantarell, Sans-Serif;
+
+$_bubble_bg_color: opacify(black,0.25);
+$_bubble_fg_color: #333;
+$_bubble_borders_color: transparentize(black,0.8);
+
+stage {
+  font-family: $font-family;
+  color: $white;
+}
+
+// Spacing
+$space: 1em;
