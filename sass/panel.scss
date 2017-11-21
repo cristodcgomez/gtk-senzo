@@ -49,17 +49,17 @@
     .app-menu-icon > StIcon,
     .popup-menu-arrow,
     .system-status-icon {
-      icon-shadow: 0 1px 2px rgba($cool-grey, 0.75);
+      icon-shadow: 0 1px 2px rgba($cool-grey, 0.5);
     }
 
     &:hover {
       color: $white;
-      text-shadow: 0 1px 6px rgba($cool-grey, 0.8);
+      text-shadow: 0 1px 4px rgba($cool-grey, 0.8);
 
       .app-menu-icon > StIcon,
       .popup-menu-arrow,
       .system-status-icon {
-        icon-shadow: 0 1px 6px rgba(0, 0, 0, 1);
+        icon-shadow: 0 1px 6px rgba($cool-grey, 0.9);
       }
     }
 
@@ -70,28 +70,28 @@
       // Trick due to St limitations. It needs a background to draw
       // a box-shadow
       background-color: rgba(0, 0, 0, 0.01);
-      box-shadow: inset 0 -2px 0 lighten(#444,5%);
-      color: lighten(#111,10%);
+      box-shadow: inset 0 -2px 0 rgba($cool-grey, 0.1);
+      color: darken($white,5%);
 
       & > .system-status-icon {
-        icon-shadow: black 0 2px 2px;
+        icon-shadow: $cool-grey 0 2px 2px;
       }
     }
 
     .system-status-icon {
-      icon-size: 1.09em;
+      icon-size: 1.1em;
       padding: 0 5px;
     }
 
     .lock-screen &,
     .login-screen &,
     .unlock-screen & {
-      color: lighten(#111, 10%);
+      color: $warm-grey-50;
 
       &:active,
       &:focus,
       &:hover {
-        color: lighten(#111, 10%);
+        color: $warm-grey-70;
       }
     }
   }
@@ -102,28 +102,28 @@
   }
   // spacing between power icon and (optional) percentage label
   .power-status.panel-status-indicators-box {
-    spacing: 0;
+    spacing: 2px;
   }
 
   .screencast-indicator {
-    color: orange;
+    color: $ubuntu;
   }
 
   &.solid {
-    background-color: black;
+    background-color: $white; //donde?
     /* transition from transparent to solid */
     transition-duration: 300ms;
 
     .panel-corner {
-      -panel-corner-background-color: black;
+      -panel-corner-background-color: $white;
     }
 
     .panel-button {
-      color: #ccc;
+      color: $warm-grey-70;
       text-shadow: none;
 
       &:hover {
-        color: lighten(#111, 10%);
+        color: lighten($warm-grey-70, 10%);
       }
     }
 
@@ -136,7 +136,8 @@
 }
 // calendar popover
 #calendarArea {
-  padding: 0.75em 1.0em;
+  padding: 0.25em 0.5em;
+  background-color: rgba($warm-grey,0.5);
 }
 
 .calendar {
@@ -196,11 +197,11 @@
 .world-clocks-button {
   &:focus,
   &:hover {
-    background-color: lighten(#222,5%);
+    background-color: $warm-grey-90;
   }
 
   &:active {
-    color: lighten(#333,5%);
+    color: $warm-grey-50;
     background-color: #444;
   }
 }
@@ -214,7 +215,7 @@
 .events-section-title,
 .weather-header,
 .world-clocks-header {
-  color: darken(#111,40%);
+  color: $white;
   font-weight: bold;
 }
 
@@ -227,7 +228,7 @@
 }
 
 .calendar-month-label {
-  color: darken(#111,5%);
+  color: $white;
   font-weight: bold;
   padding: 8px 0;
 
@@ -235,7 +236,7 @@
 }
 
 .pager-button {
-  color: white;
+  color: $white;
   background-color: transparent;
   width: 32px;
   border-radius: 4px;
@@ -279,19 +280,19 @@
 
   &:focus,
   &:hover {
-    background-color: lighten(#222,5%);
+    background-color: $cool-grey;
   }
 
   &:active,
   &:selected {
-    color: lighten(#333,5%);
-    background-color: #444;
+    color: $white;
+    background-color: $cool-grey;
     border-color: transparent; //avoid jumparound due to today
   }
 
   &.calendar-day-heading {
     //day of week heading
-    color: darken(#111,40%);
+    color: $warm-grey;
     margin-top: 1em;
     font-size: 70%;
   }
@@ -313,14 +314,14 @@
 .calendar-work-day {}
 
 .calendar-nonwork-day {
-  color: #555;
+  color: $cool-grey;
 }
 
 .calendar-today {
   font-weight: bold;
   //color: lighten(#111,10%);
   //background-color: darken(#222,5%);
-  border: 1px solid transparentize(#777,0.5);
+  border: 1px solid transparentize($cool-grey,0.5);
 }
 
 .calendar-day-with-events {
@@ -355,7 +356,7 @@
 
   &:focus,
   &:hover {
-    background-color: lighten(#222,5%);
+    background-color: $warm-grey-60;
   }
   margin: 1.5em 1.5em 0;
 }
@@ -372,9 +373,9 @@
 .message {
   &:focus,
   &:hover {
-    background-color: lighten(#222,5%);
+    background-color: $warm-grey;
   }
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 .message-icon-bin {
@@ -386,7 +387,7 @@
 }
 
 .message-icon-bin > StIcon {
-  color: darken(#111,20%);
+  color: $warm-grey-50;
   icon-size: 1.09em;
   -st-icon-style: symbolic;
 }
@@ -396,7 +397,7 @@
 }
 
 .message-secondary-bin > .event-time {
-  color: darken(#111,40%);
+  color: $white;
   font-size: 0.7em;
   /* HACK: the label should be baseline-aligned with a 1em label,
                      fake this with some bottom padding */
@@ -408,17 +409,17 @@
 }
 
 .message-title {
-  color: darken(#111,5%);
+  color: $white;
 }
 
 .message-content {
-  color: darken(#111,20%);
+  color: darken($white,5%);
   padding: 10px;
 }
 
 .message-media-control {
   padding: 12px;
-  color: darken(#111, 20%);
+  color: darken($white, 20%);
 
   &:last-child:ltr {
     padding-right: 18px;
@@ -441,7 +442,7 @@
   icon-size: 48px !important;
 
   &.fallback {
-    color: lighten(#222,10%);
+    color: lighten($cool-grey,10%);
     background-color: #222;
     border: 2px solid #222;
     border-radius: 2px;
@@ -478,23 +479,23 @@
 }
 
 .system-menu-action {
-  color: #111;
+  color: $white;
   border-radius: 32px;
   /* wish we could do 50% */
   padding: 13px;
-  border: 1px solid lighten(#777,5%);
+  border: 1px solid lighten($cool-grey,5%);
 
   &:focus,
   &:hover {
     background-color: transparentize(#111,0.9);
-    color: #111;
+    color: $white;
     border: none;
     padding: 14px;
   }
 
   &:active {
-    background-color: #444;
-    color: #333;
+    background-color: $warm-grey;
+    color: $white;
   }
 
   & > StIcon {

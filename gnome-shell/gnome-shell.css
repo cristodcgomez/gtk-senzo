@@ -44,59 +44,59 @@ stage {
 #panel .panel-button .app-menu-icon > StIcon,
 #panel .panel-button .popup-menu-arrow,
 #panel .panel-button .system-status-icon {
-  icon-shadow: 0 1px 2px rgba(51, 51, 51, 0.75);
+  icon-shadow: 0 1px 2px rgba(51, 51, 51, 0.5);
 }
 #panel .panel-button:hover {
   color: #ffffff;
-  text-shadow: 0 1px 6px rgba(51, 51, 51, 0.8);
+  text-shadow: 0 1px 4px rgba(51, 51, 51, 0.8);
 }
 #panel .panel-button:hover .app-menu-icon > StIcon,
 #panel .panel-button:hover .popup-menu-arrow,
 #panel .panel-button:hover .system-status-icon {
-  icon-shadow: 0 1px 6px black;
+  icon-shadow: 0 1px 6px rgba(51, 51, 51, 0.9);
 }
 #panel .panel-button:active, #panel .panel-button:checked, #panel .panel-button:focus, #panel .panel-button:overview {
   background-color: rgba(0, 0, 0, 0.01);
-  box-shadow: inset 0 -2px 0 #515151;
-  color: #2b2b2b;
+  box-shadow: inset 0 -2px 0 rgba(51, 51, 51, 0.1);
+  color: #f2f2f2;
 }
 #panel .panel-button:active > .system-status-icon, #panel .panel-button:checked > .system-status-icon, #panel .panel-button:focus > .system-status-icon, #panel .panel-button:overview > .system-status-icon {
-  icon-shadow: black 0 2px 2px;
+  icon-shadow: #333333 0 2px 2px;
 }
 #panel .panel-button .system-status-icon {
-  icon-size: 1.09em;
+  icon-size: 1.1em;
   padding: 0 5px;
 }
 .lock-screen #panel .panel-button, .login-screen #panel .panel-button, .unlock-screen #panel .panel-button {
-  color: #2b2b2b;
+  color: #e8e6e4;
 }
 .lock-screen #panel .panel-button:active, .lock-screen #panel .panel-button:focus, .lock-screen #panel .panel-button:hover, .login-screen #panel .panel-button:active, .login-screen #panel .panel-button:focus, .login-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active, .unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover {
-  color: #2b2b2b;
+  color: #d1cdc8;
 }
 #panel .panel-status-indicators-box,
 #panel .panel-status-menu-box {
   spacing: 2px;
 }
 #panel .power-status.panel-status-indicators-box {
-  spacing: 0;
+  spacing: 2px;
 }
 #panel .screencast-indicator {
-  color: orange;
+  color: #e95420;
 }
 #panel.solid {
-  background-color: black;
+  background-color: #ffffff;
   /* transition from transparent to solid */
   transition-duration: 300ms;
 }
 #panel.solid .panel-corner {
-  -panel-corner-background-color: black;
+  -panel-corner-background-color: #ffffff;
 }
 #panel.solid .panel-button {
-  color: #ccc;
+  color: #d1cdc8;
   text-shadow: none;
 }
 #panel.solid .panel-button:hover {
-  color: #2b2b2b;
+  color: #e8e6e4;
 }
 #panel.solid .app-menu-icon > StIcon,
 #panel.solid .popup-menu-arrow,
@@ -105,7 +105,8 @@ stage {
 }
 
 #calendarArea {
-  padding: 0.75em 1.0em;
+  padding: 0.25em 0.5em;
+  background-color: rgba(174, 167, 159, 0.5);
 }
 
 .calendar {
@@ -164,13 +165,13 @@ stage {
 .weather-button:hover,
 .world-clocks-button:focus,
 .world-clocks-button:hover {
-  background-color: #2f2f2f;
+  background-color: #bab4ad;
 }
 .datemenu-today-button:active,
 .events-section-title:active,
 .weather-button:active,
 .world-clocks-button:active {
-  color: #404040;
+  color: #e8e6e4;
   background-color: #444;
 }
 
@@ -181,7 +182,7 @@ stage {
 .events-section-title,
 .weather-header,
 .world-clocks-header {
-  color: black;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -194,13 +195,13 @@ stage {
 }
 
 .calendar-month-label {
-  color: #040404;
+  color: #ffffff;
   font-weight: bold;
   padding: 8px 0;
 }
 
 .pager-button {
-  color: white;
+  color: #ffffff;
   background-color: transparent;
   width: 32px;
   border-radius: 4px;
@@ -236,15 +237,15 @@ stage {
   border-radius: 1.4em;
 }
 .calendar-day-base:focus, .calendar-day-base:hover {
-  background-color: #2f2f2f;
+  background-color: #333333;
 }
 .calendar-day-base:active, .calendar-day-base:selected {
-  color: #404040;
-  background-color: #444;
+  color: #ffffff;
+  background-color: #333333;
   border-color: transparent;
 }
 .calendar-day-base.calendar-day-heading {
-  color: black;
+  color: #aea79f;
   margin-top: 1em;
   font-size: 70%;
 }
@@ -262,12 +263,12 @@ stage {
 }
 
 .calendar-nonwork-day {
-  color: #555;
+  color: #333333;
 }
 
 .calendar-today {
   font-weight: bold;
-  border: 1px solid rgba(119, 119, 119, 0.5);
+  border: 1px solid rgba(51, 51, 51, 0.5);
 }
 
 .calendar-day-with-events {
@@ -303,7 +304,7 @@ stage {
   margin: 1.5em 1.5em 0;
 }
 .message-list-clear-button.button:focus, .message-list-clear-button.button:hover {
-  background-color: #2f2f2f;
+  background-color: #dddad6;
 }
 
 .message-list-sections {
@@ -316,10 +317,10 @@ stage {
 }
 
 .message {
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .message:focus, .message:hover {
-  background-color: #2f2f2f;
+  background-color: #aea79f;
 }
 
 .message-icon-bin {
@@ -330,7 +331,7 @@ stage {
 }
 
 .message-icon-bin > StIcon {
-  color: black;
+  color: #e8e6e4;
   icon-size: 1.09em;
   -st-icon-style: symbolic;
 }
@@ -340,7 +341,7 @@ stage {
 }
 
 .message-secondary-bin > .event-time {
-  color: black;
+  color: #ffffff;
   font-size: 0.7em;
   /* HACK: the label should be baseline-aligned with a 1em label,
                      fake this with some bottom padding */
@@ -352,17 +353,17 @@ stage {
 }
 
 .message-title {
-  color: #040404;
+  color: #ffffff;
 }
 
 .message-content {
-  color: black;
+  color: #f2f2f2;
   padding: 10px;
 }
 
 .message-media-control {
   padding: 12px;
-  color: black;
+  color: #cccccc;
 }
 .message-media-control:last-child:ltr {
   padding-right: 18px;
@@ -381,7 +382,7 @@ stage {
   icon-size: 48px !important;
 }
 .media-message-cover-icon.fallback {
-  color: #3c3c3c;
+  color: #4d4d4d;
   background-color: #222;
   border: 2px solid #222;
   border-radius: 2px;
@@ -415,21 +416,21 @@ stage {
 }
 
 .system-menu-action {
-  color: #111;
+  color: #ffffff;
   border-radius: 32px;
   /* wish we could do 50% */
   padding: 13px;
-  border: 1px solid #848484;
+  border: 1px solid #404040;
 }
 .system-menu-action:focus, .system-menu-action:hover {
   background-color: rgba(17, 17, 17, 0.1);
-  color: #111;
+  color: #ffffff;
   border: none;
   padding: 14px;
 }
 .system-menu-action:active {
-  background-color: #444;
-  color: #333;
+  background-color: #aea79f;
+  color: #ffffff;
 }
 .system-menu-action > StIcon {
   icon-size: 16px;
