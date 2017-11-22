@@ -1,10 +1,11 @@
 /* TOP BAR */
 #panel {
-  background-color: rgba($warm-grey-50, 0.75);
+  background-color: rgba(lighten($ubuntu,10%), 0.40);
   /* transition from solid to transparent */
   transition-duration: 250ms;
   font-weight: bold;
   height: 1.86em;
+  border-radius: 3px 3px 0 0;
 
   &.lock-screen,
   &.login-screen,
@@ -20,14 +21,14 @@
 
   .panel-corner {
     -panel-corner-radius: $panel-corner-radius;
-    -panel-corner-background-color: rgba($white, 0.35);
+    -panel-corner-background-color: rgba($black, 0.8);
     -panel-corner-border-width: 3px;
     -panel-corner-border-color: transparent;
 
     &:active,
     &:focus,
     &:overview {
-      -panel-corner-border-color: lighten(#444,5%);
+      -panel-corner-border-color: lighten($black,5%);
     }
   }
 
@@ -110,12 +111,12 @@
   }
 
   &.solid {
-    background-color: $white; //donde?
+    background-color: $black; //donde?
     /* transition from transparent to solid */
     transition-duration: 300ms;
 
     .panel-corner {
-      -panel-corner-background-color: $white;
+      -panel-corner-background-color: $black;
     }
 
     .panel-button {

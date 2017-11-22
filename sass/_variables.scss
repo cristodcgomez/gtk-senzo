@@ -38,9 +38,9 @@ $panel-corner-radius: 3px;
 $font-size: 12;
 $font-family: Ubuntu, Cantarell, Sans-Serif;
 
-$_bubble_bg_color: opacify(black,0.25);
+$_bubble_bg_color: opacify($black,0.25);
 $_bubble_fg_color: #333;
-$_bubble_borders_color: transparentize(black,0.8);
+$_bubble_borders_color: transparentize($black,0.8);
 
 stage {
   font-family: $font-family;
