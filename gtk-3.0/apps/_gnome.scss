@@ -54,7 +54,7 @@ CheeseThumbView /* Cheese */
  * Terminal *
  ************/
 
-$gnome_terminal: #546e7a;
+$gnome_terminal: $bg_color;
 $terminal_bg_color: transparentize(#002B36, 0.1);
 $terminal_fg_color: #839495;
 
@@ -224,7 +224,7 @@ MathWindow {
 
         &:backdrop {
           background-color: darken($gnome_calculator,10%);
-          color: transparentize($base_color, 0.5);  
+          color: transparentize($base_color, 0.5);
         }
       }
     }
