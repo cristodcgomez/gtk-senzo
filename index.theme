@@ -1,9 +1,9 @@
-[X-GNOME-Metatheme]
-Name=UEssence
+[Desktop Entry]
 Type=X-GNOME-Metatheme
+Name=UEssence
 Comment=Ubuntu Essence theme
 Encoding=UTF-8
+
+[X-GNOME-Metatheme]
 GtkTheme=UEssence
-MetacityTheme=UEssence
 IconTheme=Paper
-CursorTheme=DMZ-White
